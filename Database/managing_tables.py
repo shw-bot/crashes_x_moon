@@ -2,17 +2,19 @@
 """
 Created on Tue Jul 18 22:03:44 2023
 
-@author: cinshalewolfe
+@author: shalewolfe
 """
 
 import sqlite3
 import pandas as pd
 
 # create connection to database
-conn = sqlite3.connect('Databse\cin_traffic.db')
+
+conn = sqlite3.connect('YOUR_DATABASE_FILEPATH.db')
 cursor = conn.cursor()
 
 # drop columns we don't need
+
 cursor.execute('ALTER TABLE crashes DROP COLUMN cpd_neighborhood')
 cursor.execute('ALTER TABLE crashes DROP COLUMN instanceid')
 cursor.execute('ALTER TABLE crashes DROP COLUMN localreportno')
@@ -23,7 +25,8 @@ cursor.execute('ALTER TABLE crashes DROP COLUMN roadsurface')
 cursor.execute('ALTER TABLE crashes DROP COLUMN typeofperson')
 cursor.execute('ALTER TABLE crashes DROP COLUMN datecrashreported')
 
-# delete rows with null neighborhood values since we want to know that info
+# delete rows with null neighborhood values since it's important info
+
 cursor.execute('''
                DELETE FROM crashes
                WHERE community_council_neighborhood = 'N/A'
@@ -44,7 +47,7 @@ cursor.execute('''
                ALTER TABLE crashes DROP COLUMN crashdate
                ''')
 
-#binary encode the gender column
+# binary encode the gender column
 
 cursor.execute('''
                UPDATE crashes

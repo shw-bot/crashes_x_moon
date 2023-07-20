@@ -2,23 +2,30 @@
 """
 Created on Mon Jul 17 23:33:47 2023
 
-@author: cinshalewolfe
+@author: shalewolfe
 """
 import requests
 import json
 import sqlite3
-import pandas as pd
 import config
+
+# requestion a connection to the crash data API
 
 api_token = config.API_TOKEN
 
 r = requests.get('https://data.cincinnati-oh.gov/resource/rvmt-pkmq.json?$limit=1000&$offset=8000&$$app_token={api_token}', verify=False)
 
+# load json data
+
 data = r.text
 parse = json.loads(data)
 
-conn = sqlite3.connect('Database\cin_traffic.db')
+# create a connection to sql database
+
+conn = sqlite3.connect('YOUR_DATABASE_FILEPATH.db')
 cursor = conn.cursor()
+
+# create sql table to load json data into
 
 cursor.execute('''
                CREATE TABLE IF NOT EXISTS crashes(
@@ -66,6 +73,8 @@ for idx, row in enumerate(parse):
     query = f'INSERT INTO crashes VALUES ({placeholders})'
     cursor.execute(query, keys)
     print(f'Row {idx + 1} data inserted Successfully')
+
+# create back-up table
 
 cursor.execute('''
                CREATE TABLE crashes_backup AS SELECT * FROM crashes

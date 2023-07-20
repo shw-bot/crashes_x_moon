@@ -4,7 +4,7 @@ import numpy as np
 from sklearn import preprocessing
 
 
-conn = sqlite3.connect('cin_traffic.db')
+conn = sqlite3.connect('Database\cin_traffic.db')
 cursor = conn.cursor()
 
 query = pd.read_sql_query ('''
@@ -41,7 +41,7 @@ crashes_x_moon = crashes_x_moon.drop('address_x', axis=1)
 crashes_x_moon['hundred_block'] = crashes_x_moon['hundred_block'].fillna(0)
 crashes_x_moon['hundred_block'] = crashes_x_moon['hundred_block'].replace('', 0)
 
-crashes_x_moon.to_csv('crashes_x_moon.csv')
+crashes_x_moon.to_csv('Database\crashes_x_moon.csv')
 
 
         

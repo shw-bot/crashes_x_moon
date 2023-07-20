@@ -8,13 +8,16 @@ import requests
 import json
 import sqlite3
 import pandas as pd
+import config
 
-r = requests.get('https://data.cincinnati-oh.gov/resource/rvmt-pkmq.json?$limit=1000&$offset=8000&$$app_token=Lj9QgGYRLWk8EtLtwO77SR8jL', verify=False)
+api_token = config.API_TOKEN
+
+r = requests.get('https://data.cincinnati-oh.gov/resource/rvmt-pkmq.json?$limit=1000&$offset=8000&$$app_token={api_token}', verify=False)
 
 data = r.text
 parse = json.loads(data)
 
-conn = sqlite3.connect(r'C:\Users\cinshalewolfe\Desktop\traffic_project\cin_traffic.db')
+conn = sqlite3.connect('Database\cin_traffic.db')
 cursor = conn.cursor()
 
 cursor.execute('''

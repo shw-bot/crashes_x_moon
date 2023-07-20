@@ -9,7 +9,7 @@ import sqlite3
 import pandas as pd
 
 # create connection to database
-conn = sqlite3.connect('cin_traffic.db')
+conn = sqlite3.connect('Databse\cin_traffic.db')
 cursor = conn.cursor()
 
 # drop columns we don't need
@@ -57,7 +57,7 @@ cursor.execute('''
 
 # create sql table from csv 
    
-moon_phases = pd.read_csv('moon_phases.csv')
+moon_phases = pd.read_csv('Database\moon_phases.csv')
 
 cursor.execute('''
                CREATE TABLE moon_phases (

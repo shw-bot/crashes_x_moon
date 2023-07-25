@@ -26,13 +26,13 @@ To replicate the analysis and visualizations, follow these steps:
 3. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
 4. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
 5. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.
-6. Import the CSV file and the `moon_phases.csv` into Tableau for visualization.
+6. Import the CSV file  `crashes_x_moon.csv` into Tableau for visualization.
 7. Explore the Tableau visualizations to analyze the correlation between crash severity and moon phases, as well as the number of crashes based on astrological sign rulership.
 
 Please note that some data files, such as the API key and SQLite database, are excluded from the repository to maintain security and privacy. Users need to generate their own API key and database locally.
 
 ## Notes
-The project aims to compare Western and Vedic astrological systems and their potential influence on crash rates. The hypothesis involves analyzing the number of crashes when the moon is in signs ruled by Mars, Saturn, or Uranus. The comparison between Western and Vedic systems may provide insights into any significant differences.
+Part of the project aims to compare Western and Vedic astrological rulers and their potential influence on crash rates. The two systems have different planetary rulers for the 12 signs, as well as a different calender altogether. This means that we can analyze crashes on the same day under different signs and their respective rulers to see if any correlations exist. The hypothesis involves analyzing the number of crashes when the moon is in signs ruled by Mars or Saturn for both Western and Vedic systems, or Uranus for the Western system, since they symbolize violence, discipline, and freak accidents respectively. The data actually showed Venus-ruled signs to have the highest crash frequency in the Western system. Venus symbolizes luxury, pleasure, and hubris so further analysis into whether the crashes involved alcohol could be interesting. The analysis of Vedic planetary rulership showed a much more balanced result, but did contain more crashes under moon signs with mars as the ruling planet. The comparison between Western and Vedic systems may provide insights into additional significant differences.
 
 ## License
 [MIT License](LICENSE)

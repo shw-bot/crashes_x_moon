@@ -21,13 +21,14 @@ This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to m
 ## Usage
 To replicate the analysis and visualizations, follow these steps:
 
-1. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq), scroll down to "App Tokens" and click to sign up for one. Then, update the `config.py` file with the key.
-2. Activate the virtual environment with the venv file: venv > Scripts\activate.bat using windows CMD prompt or your preferred method.
-3. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
-4. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
-5. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.
-6. Import the CSV file  `crashes_x_moon.csv` into Tableau for visualization.
-7. Explore the Tableau visualizations to analyze the correlation between crash severity and moon phases, as well as the number of crashes based on astrological sign rulership.
+1. git clone https://github.com/shw-bot/crashes_x_moon
+2. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq), scroll down to "App Tokens" and click to sign up for one. Then, update the `config.py` file with the key.
+3. Activate the virtual environment with the venv file: venv > Scripts\activate.bat using windows CMD prompt or your preferred method.
+4. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
+5. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
+6. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.
+7. Import the CSV file  `crashes_x_moon.csv` into Tableau for visualization.
+8. Explore the Tableau visualizations to analyze the correlation between crash severity and moon phases, as well as the number of crashes based on astrological sign rulership.
 
 Please note that some data files, such as the API key and SQLite database, are excluded from the repository to maintain security and privacy. Users need to generate their own API key and database locally.
 

@@ -22,11 +22,12 @@ This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to m
 To replicate the analysis and visualizations, follow these steps:
 
 1. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq), scroll down to "App Tokens" and click to sign up for one. Then, update the `config.py` file with the key.
-2. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
-3. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
-4. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.
-5. Import the CSV file and the `moon_phases.csv` into Tableau for visualization.
-6. Explore the Tableau visualizations to analyze the correlation between crash severity and moon phases, as well as the number of crashes based on astrological sign rulership.
+2. Activate the virtual environment with the venv file: venv > Scripts\activate.bat using windows CMD prompt or you preferred method.
+3. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
+4. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
+5. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.
+6. Import the CSV file and the `moon_phases.csv` into Tableau for visualization.
+7. Explore the Tableau visualizations to analyze the correlation between crash severity and moon phases, as well as the number of crashes based on astrological sign rulership.
 
 Please note that some data files, such as the API key and SQLite database, are excluded from the repository to maintain security and privacy. Users need to generate their own API key and database locally.
 

@@ -1,7 +1,7 @@
 # Cincinnati Crash Data and Moon Position Analysis
 
 ## Overview
-This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to moon phases and astrological signs. The project pulls crash data from [data.cincinnati-oh.gov](https://data.cincinnati-oh.gov) and combines it with moon phase and astrological sign data from a CSV file. The analysis visualizes the average crash severity in different Cincinnati neighborhoods based on moon phases and astrological positions.
+This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to moon phases and astrological signs. The project pulls crash data from [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq) and combines it with moon phase and astrological sign data from a CSV file. The analysis visualizes the average crash severity in different Cincinnati neighborhoods based on moon phases and astrological positions.
 
 ## Tableau Visualizations
 1. [Cincinnati Crash Severity x Moon's Astrological Position](https://public.tableau.com/views/CincinnatiCrashDataxMoonPosition/CincinnatiCrashSeverityxMoonsAstrologicalPosition?:language=en-US&:display_count=n&:origin=viz_share_link): This visualization presents the average crash severity (ranging from 0 to 3, where 0 is fatality and 3 is no injuries) in each Cincinnati neighborhood based on moon phases and astrological positions.
@@ -21,7 +21,7 @@ This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to m
 ## Usage
 To replicate the analysis and visualizations, follow these steps:
 
-1. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://data.cincinnati-oh.gov), and update the `config.py` file with the key.
+1. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq), scroll down to "App Tokens" and click to sign up for one. Then, update the `config.py` file with the key.
 2. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
 3. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
 4. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.

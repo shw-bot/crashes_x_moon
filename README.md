@@ -22,7 +22,7 @@ This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to m
 To replicate the analysis and visualizations, follow these steps:
 
 1. Obtain the API key by signing up for free on [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq), scroll down to "App Tokens" and click to sign up for one. Then, update the `config.py` file with the key.
-2. Activate the virtual environment with the venv file: venv > Scripts\activate.bat using windows CMD prompt or you preferred method.
+2. Activate the virtual environment with the venv file: venv > Scripts\activate.bat using windows CMD prompt or your preferred method.
 3. Run `api_to_sql_db.py` to pull crash data from the API and create the SQLite database.
 4. Execute `managing_tables.py` to create and clean the necessary tables and merge the crash data with moon phase data.
 5. Run `crashes_x_moonphase.py` to clean the combined data and create a CSV file for visualization in Tableau.

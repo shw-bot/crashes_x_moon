@@ -1,7 +1,7 @@
 # Cincinnati Crash Data and Moon Position Analysis
 
 ## Overview
-This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to moon phases and astrological signs. The project pulls crash data from [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq) and combines it with moon phase and astrological sign data from a CSV file. The analysis visualizes the average crash severity in different Cincinnati neighborhoods based on moon phases and astrological positions.
+This GitHub project aims to analyze Cincinnati, Ohio crash data in relation to moon phases and astrological signs. The project pulls crash data from [data.cincinnati-oh.gov](https://dev.socrata.com/foundry/data.cincinnati-oh.gov/rvmt-pkmq) and combines it with moon phase and astrological sign data (3/23-4/23) from a CSV file. The analysis visualizes the average crash severity in different Cincinnati neighborhoods based on moon phases and astrological positions.
 
 ## Tableau Visualizations
 1. [Cincinnati Crash Severity x Moon's Astrological Position](https://public.tableau.com/views/CincinnatiCrashDataxMoonPosition/CincinnatiCrashSeverityxMoonsAstrologicalPosition?:language=en-US&:display_count=n&:origin=viz_share_link): This visualization presents the average crash severity (ranging from 0 to 3, where 0 is fatality and 3 is no injuries) in each Cincinnati neighborhood based on moon phases and astrological positions.
